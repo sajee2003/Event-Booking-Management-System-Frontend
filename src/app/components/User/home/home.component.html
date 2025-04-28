@@ -1,0 +1,111 @@
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-background">
+      <div class="hero-section">
+        <div class="hero-content">
+          <h1>Plan Events Effortlessly</h1>
+          <p>Discover the easiest way to book venues and organize unforgettable events.</p>
+          <button class="btn btn-primary" routerLink="/events">Get Started</button>
+        </div>
+      </div>
+   
+  <!-- Quick Access Section -->
+  <section class="quick-access">
+    <h2>Quick Access</h2>
+    <div class="quick-access-grid">
+      <!-- Assets Card -->
+      <div class="quick-access-card">
+        <div class="card-image">
+          <img src="/Assets/asset.jpg" alt="Assets - notebook and laptop">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Assets</h3>
+          <p class="card-description">View and get all assets.</p>
+          <a href="#" class="card-button">View Assets</a>
+        </div>
+      </div>
+   
+      <!-- Packages Card -->
+      <div class="quick-access-card">
+        <div class="card-image">
+          <img src="/Assets/packages.jpg" alt="Packages - cardboard boxes">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Packages</h3>
+          <p class="card-description">Book and manage your packages.</p>
+          <a href="#" class="card-button">View Packages</a>
+        </div>
+      </div>
+   
+      <!-- Inventory Items Card -->
+      <div class="quick-access-card">
+        <div class="card-image">
+          <img src="/Assets/inventory.jpg" alt="Inventory Items - papers and sticky notes">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Inventory Items</h3>
+          <p class="card-description">Access and process inventory items.</p>
+          <a href="#" class="card-button">View Inventory Item</a>
+        </div>
+      </div>
+   
+      <!-- Others Card -->
+      <div class="quick-access-card">
+        <div class="card-image">
+          <img src="/Assets/equipment.jpg" alt="Others - electronic equipment">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Others</h3>
+          <p class="card-description">Want to know more.</p>
+          <a href="#" class="card-button">Explore More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+   
+  <!-- Upcoming Events Section -->
+  <section class="upcoming-events">
+    <h2>Upcoming Events</h2>
+    <div class="events-grid">
+      <!-- Event Card 1 -->
+      <div class="event-card" *ngFor="let event of events">
+        <div class="event-image">
+          <img [src]="event.imageUrl" [alt]="event.title">
+        </div>
+        <div class="event-content">
+          <h3 class="event-title">{{ event.title }}</h3>
+          <p class="event-description">{{ event.description }}</p>
+          <a href="#" class="event-button">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+   
+ 
+  <!-- <section class="testimonials">
+    <div class="container">
+      <h2>Hear from our awesome users!</h2>
+      <div class="testimonials-grid">
+       
+        <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+          <div class="avatar">
+            <img [src]="testimonial.avatarUrl" [alt]="testimonial.name">
+          </div>
+          <div>
+            <h3>{{ testimonial.name }}</h3>
+            <div class="stars">
+              <span *ngFor="let star of [1,2,3,4,5]">
+                {{ star <= testimonial.rating ? '★' : '☆' }} </span>
+            </div>
+          </div>
+   
+          <p class="testimonial-text">"{{ testimonial.comment }}"</p>
+        </div>
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <button type="button" class="nav-btn" (click)="prevTestimonial()">&lt;</button>
+      <button type="button" class="nav-btn" (click)="nextTestimonial()">&gt;</button>
+    </div>
+  </section>
+  -->

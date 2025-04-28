@@ -1,0 +1,27 @@
+<header>
+    <div class="container">
+      <nav>
+        <a routerLink="/" class="logo">
+          <span class="logo-icon">◯</span>
+          EventEase
+        </a>
+       
+        <div class="nav-links">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+          <a routerLink="/events" routerLinkActive="active">Events</a>
+          <a routerLink="/packages" routerLinkActive="active">Packages</a>
+        </div>
+       
+        <div class="auth-buttons">
+          <!-- <button class="btn btn-outline" (click)="logout()" *ngIf="authService.isLoggedIn()"> -->
+          <button class="btn btn-outline" >
+            <i class="icon-logout"></i> Logout
+          </button>
+          <!-- <button class="btn btn-primary" *ngIf="!authService.isLoggedIn()"> -->
+            <button class="btn btn-primary">
+            <i class="icon-help"></i> Help
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
